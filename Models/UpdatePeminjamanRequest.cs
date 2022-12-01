@@ -6,8 +6,8 @@
         public string Kelas { get; set; }
         public string Buku { get; set; }
         public string Pengawas { get; set; }
-        public string Tanggal { get; set; }
-        public int Denda { get; set; }
+        public DateTime Tanggal { get; set; }
+        public decimal Denda { get; set; }
         public string Status { get; set; }
     }
 }

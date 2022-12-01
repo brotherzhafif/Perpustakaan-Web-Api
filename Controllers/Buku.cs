@@ -9,9 +9,9 @@ namespace Perpustakaan_Web_Api.Controllers
     [Route("api/[Controller]")]
     public class Buku : Controller
     {
-        private readonly BukuAPIDbContext dbContext;
+        private readonly PerpustakaanDbContext dbContext;
 
-        public Buku(BukuAPIDbContext dbContext)
+        public Buku(PerpustakaanDbContext dbContext)
         {
             this.dbContext = dbContext;
         }

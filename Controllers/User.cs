@@ -9,9 +9,9 @@ namespace Perpustakaan_Web_Api.Controllers
     [Route("api/[Controller]")]
     public class User : Controller
     {
-        private readonly UserAPIDbContext dbContext;
+        private readonly PerpustakaanDbContext dbContext;
 
-        public User(UserAPIDbContext dbContext)
+        public User(PerpustakaanDbContext dbContext)
         {
             this.dbContext = dbContext;
         }
@@ -31,7 +31,6 @@ namespace Perpustakaan_Web_Api.Controllers
                 Nama = addUser.Nama,
                 Password = addUser.Password,
                 Level = addUser.Level,
-                Image = addUser.Image
             };
 
             await dbContext.User.AddAsync(user);
@@ -51,7 +50,6 @@ namespace Perpustakaan_Web_Api.Controllers
                 user.Nama = updateUser.Nama;
                 user.Password = updateUser.Password;
                 user.Level = updateUser.Level;
-                user.Image = updateUser.Image;
 
                 await dbContext.SaveChangesAsync();
 

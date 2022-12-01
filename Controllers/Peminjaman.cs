@@ -9,9 +9,9 @@ namespace Perpustakaan_Web_Api.Controllers
     [Route("api/[Controller]")]
     public class Peminjaman : Controller
     {
-        private readonly PeminjamanAPIDbContext dbContext;
+        private readonly PerpustakaanDbContext dbContext;
 
-        public Peminjaman(PeminjamanAPIDbContext dbContext)
+        public Peminjaman(PerpustakaanDbContext dbContext)
         {
             this.dbContext = dbContext;
         }

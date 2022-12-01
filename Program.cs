@@ -10,9 +10,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<UserAPIDbContext>(options => options.UseInMemoryDatabase("Library_Database"));
-builder.Services.AddDbContext<BukuAPIDbContext>(options => options.UseInMemoryDatabase("Library_Database"));
-builder.Services.AddDbContext<PeminjamanAPIDbContext>(options => options.UseInMemoryDatabase("Library_Database"));
+builder.Services.AddDbContext<PerpustakaanDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Library_Database")));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
